@@ -5,7 +5,16 @@ body {
 }
 
 .App {
+  background-image: url('images/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  position: absolute;
   text-align: center;
+  width: 100vw;
+  z-index: -11;
 }
 
 .App-logo {
