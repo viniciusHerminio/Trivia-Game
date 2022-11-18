@@ -1,0 +1,90 @@
+body {
+  font-family: Verdana , Geneva , Tahoma , sans-serif;
+}
+
+.loginMainDiv {
+  background-image: url('../images/backgroundLogin.png');
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: -11;
+}
+
+.purpleLayer {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(60, 27, 122, 0.9));
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: -10;
+}
+
+.loginForm {
+  background-color: white;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 266px;
+  margin: 12% auto auto;
+  max-width: 614px;
+}
+
+.loginForm img {
+  height: 100px;
+  margin: 25px 0;
+  width: 250px;
+}
+
+.loginForm input {
+  border: 1px solid rgb(225, 229, 235);
+  height: 45px;
+  margin-bottom: 20px;
+  width: 519px;
+}
+
+.loginForm button {
+  background-color: rgb(47, 193, 140);
+  border: none;
+  color: white;
+  width: 519px;
+}
+
+
+.intContainer {
+  height: 768px;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  width: 1366px;
+}
+
+.intRed {
+  left: 962px;
+  position: absolute;
+  top: 47px;
+  z-index: -9;
+}
+
+.intYellow {
+  left: 1029px;
+  position: absolute;
+  top: 254px;
+  z-index: -9;
+}
+
+.intGreen {
+  left: 198px;
+  position: absolute;
+  top: 81px;
+  z-index: -9;
+}
+
+.intBlue {
+  left: 74px;
+  position: absolute;
+  top: 302px;
+  z-index: -9;
+}

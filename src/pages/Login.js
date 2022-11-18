@@ -3,6 +3,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getToken, getLogin } from '../redux/actions';
 import logo from '../trivia.png';
+import './Login.css';
+import intRed from '../images/intRed.png';
+import intYellow from '../images/intYellow.png';
+import intGreen from '../images/intGreen.png';
+import intBlue from '../images/intBlue.png';
 
 class Login extends React.Component {
   state = {
@@ -49,10 +54,16 @@ class Login extends React.Component {
   render() {
     const { disabled, name, email } = this.state;
     return (
-      <div className="vh-100 d-flex justify-content-center align-items-center bg-white">
+      <div className="loginMainDiv">
+        <div className="purpleLayer" />
+        <div className="intContainer">
+          <img src={ intRed } alt="interrogação vermelho" className="intRed" />
+          <img src={ intYellow } alt="interrogação amarelo " className="intYellow" />
+          <img src={ intGreen } alt="interrogação amarelo " className="intGreen" />
+          <img src={ intBlue } alt="interrogação amarelo " className="intBlue" />
+        </div>
         <div
-          className="col-md-4 p-5 border border-2
-        rounded-5 bg-light shadow-lg"
+          className="loginForm"
         >
           <img src={ logo } className="App-logo" alt="logo" />
           <label htmlFor="inputEmail" className="form-label mt-5 d-grid">
