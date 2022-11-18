@@ -43,10 +43,14 @@ body {
   width: 519px;
 }
 
-.loginForm button {
+.btn-success {
   background-color: rgb(47, 193, 140);
   border: none;
+  border-radius: 5px;
   color: white;
+  cursor: pointer;
+  height: 45px;
+  margin-bottom: 20px;
   width: 519px;
 }
 
@@ -89,4 +93,9 @@ body {
   position: absolute;
   top: 302px;
   z-index: -9;
+}
+
+
+.btnSettings {
+  visibility: hidden;
 }
