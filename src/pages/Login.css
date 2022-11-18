@@ -99,10 +99,6 @@ body {
 }
 
 
-.btnSettings {
-  visibility: hidden;
-}
-
 @media only screen and ( max-width : 1040px ) {
 
   .loginForm {
