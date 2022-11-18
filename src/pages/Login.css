@@ -12,7 +12,7 @@ body {
 }
 
 .purpleLayer {
-  background-image: linear-gradient(to top, black, rgba(60, 27, 122, 0.8));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(60, 27, 122, 0.8));
   height: 100vh;
   position: absolute;
   width: 100vw;
@@ -27,7 +27,6 @@ body {
   flex-direction: column;
   margin: 25vh auto auto;
   max-width: 614px;
-  min-height: 266px;
 }
 
 .loginForm img {
@@ -68,34 +67,82 @@ body {
 }
 
 .intRed {
-  left: 962px;
+  height: 24.5%;
+  left: 75%;
   position: absolute;
-  top: 47px;
+  top: 8%;
   z-index: -9;
 }
 
 .intYellow {
-  left: 1029px;
+  height: 38%;
+  left: 80%;
   position: absolute;
-  top: 254px;
+  top: 40%;
   z-index: -9;
 }
 
 .intGreen {
-  left: 198px;
+  height: 38%;
+  left: 16%;
   position: absolute;
-  top: 81px;
+  top: 12%;
   z-index: -9;
 }
 
 .intBlue {
-  left: 74px;
+  height: 27%;
+  left: 8%;
   position: absolute;
-  top: 302px;
+  top: 48%;
   z-index: -9;
 }
 
 
 .btnSettings {
   visibility: hidden;
+}
+
+@media only screen and ( max-width : 1040px ) {
+
+  .loginForm {
+    max-width: 100%;
+  }
+
+  .loginForm label {
+    width: 100%;
+  }
+
+  .loginForm input {
+    width: 100%;
+  }
+
+  .loginForm div, .loginForm button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .intRed {
+    height: 18%;
+    left: 66%;
+    top: 1%;
+  }
+
+  .intGreen {
+    height: 24%;
+    left: 10%;
+    top: 4%;
+  }
+
+  .intYellow {
+    height: 24%;
+    left: 60%;
+    top: 75%;
+  }
+
+  .intBlue {
+    height: 18%;
+    left: 6%;
+    top: 77%;
+  }
 }

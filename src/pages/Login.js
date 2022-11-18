@@ -56,17 +56,15 @@ class Login extends React.Component {
     return (
       <div className="loginMainDiv">
         <div className="purpleLayer" />
-        <div className="intContainer">
-          <img src={ intRed } alt="interrogação vermelho" className="intRed" />
-          <img src={ intYellow } alt="interrogação amarelo " className="intYellow" />
-          <img src={ intGreen } alt="interrogação amarelo " className="intGreen" />
-          <img src={ intBlue } alt="interrogação amarelo " className="intBlue" />
-        </div>
+        <img src={ intRed } alt="interrogação vermelho" className="intRed" />
+        <img src={ intYellow } alt="interrogação amarelo " className="intYellow" />
+        <img src={ intGreen } alt="interrogação amarelo " className="intGreen" />
+        <img src={ intBlue } alt="interrogação amarelo " className="intBlue" />
         <div
           className="loginForm"
         >
           <img src={ logo } className="App-logo" alt="logo" />
-          <label htmlFor="inputEmail" className="form-label mt-5 d-grid">
+          <label htmlFor="inputEmail">
             <input
               id="inputEmail"
               type="email"
@@ -78,7 +76,7 @@ class Login extends React.Component {
               placeholder="Qual é o seu e-mail do gravatar?"
             />
           </label>
-          <label htmlFor="inputName" className="form-label d-grid">
+          <label htmlFor="inputName">
             <input
               id="inputName"
               data-testid="input-player-name"
