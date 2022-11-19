@@ -6,15 +6,22 @@ body {
 
 .App {
   background-image: url('images/background.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center 0;
+  background-size: 120%;
   color: white;
   height: 100vh;
   position: absolute;
   text-align: center;
   width: 100vw;
   z-index: -11;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  text-align: center;
 }
 
 .App-logo {
@@ -52,6 +59,17 @@ body {
   color: #61dafb;
 }
 
+.footer {
+  background: #3C1B7A;
+  height: 253px;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+
 @keyframes shake {
 
   10%, 90% {
@@ -69,4 +87,16 @@ body {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+
+@media only screen and ( max-width : 1040px ) {
+  .App {
+    background-size: 120%;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
+  
 }

@@ -5,12 +5,7 @@ import PropTypes from 'prop-types';
 import MD5 from 'crypto-js/md5';
 // import Header from '../components/Header';
 import { clearState } from '../redux/actions';
-import ellipse from '../images/Logo/ellipse.png';
-import interrrogacaoPAmarelo from '../images/Logo/interrrogacaoPAmarelo.png';
-import interrrogacaoPVerde from '../images/Logo/interrrogacaoPVerde.png';
-import interrrogacaoPVermelho from '../images/Logo/interrrogacaoPVermelho.png';
-import polygon from '../images/Logo/polygon.png';
-import trivia from '../images/Logo/trivia.png';
+import logoTrivia from '../images/logoTrivia.png';
 
 class Feedback extends React.Component {
   playAgain = () => {
@@ -30,65 +25,62 @@ class Feedback extends React.Component {
     const minimo = 3;
     return (
       <div>
-        <img src={ ellipse } alt="ellipse" className="ellipse" />
-        <img src={ interrrogacaoPAmarelo } alt="intAmarelo" className="intAmarelo" />
-        <img src={ interrrogacaoPVerde } alt="intVerde" className="intVerde" />
-        <img src={ interrrogacaoPVermelho } alt="intVermelho" className="intVermelho" />
-        <img src={ polygon } alt="polygon" className="polygon" />
-        <img src={ trivia } alt="trivia" className="trivia" />
         <div className="footer" />
-        <img
-          data-testid="header-profile-picture"
-          src={ `https://www.gravatar.com/avatar/${MD5(gravatarEmail)}` }
-          alt="Foto de perfil"
-          className="foto"
-        />
-        <div className="box" />
-        {/* <Header /> */}
-        {
-          assertions < minimo
-            ? (
-              <p
-                data-testid="feedback-text"
-                className="mensagem"
-              >
-                Could be better...
-              </p>
-            )
-            : <p data-testid="feedback-text" className="mensagem">Well Done!</p>
-        }
-        <p data-testid="feedback-total-question" className="assertions">
-          Você acertou
-          {' '}
-          {assertions}
-          {' '}
-          questões!
-        </p>
-        <p data-testid="feedback-total-score" className="score">
-          Um total de
-          {' '}
-          {score}
-          {' '}
-          pontos
-        </p>
-        {/* </div> */}
-        <button
-          type="button"
-          data-testid="btn-play-again"
-          onClick={ this.playAgain }
-          className="play"
-        >
-          Play Again
+        <img src={ logoTrivia } alt="Logo" className="logoTrivia" />
+        <div className="containerFeedback">
+          <div className="box">
+            {/* <Header /> */}
+            <img
+              data-testid="header-profile-picture"
+              src={ `https://www.gravatar.com/avatar/${MD5(gravatarEmail)}` }
+              alt="Foto de perfil"
+              className="foto"
+            />
+            {
+              assertions < minimo
+                ? (
+                  <p
+                    data-testid="feedback-text"
+                    className="mensagem"
+                  >
+                    Could be better...
+                  </p>
+                )
+                : <p data-testid="feedback-text" className="mensagem">Well Done!</p>
+            }
+            <p data-testid="feedback-total-question" className="assertions">
+              Você acertou
+              {' '}
+              {assertions}
+              {' '}
+              questões!
+            </p>
+            <p data-testid="feedback-total-score" className="score">
+              Um total de
+              {' '}
+              {score}
+              {' '}
+              pontos
+            </p>
+          </div>
+          <button
+            type="button"
+            data-testid="btn-play-again"
+            onClick={ this.playAgain }
+            className="play"
+          >
+            Play Again
 
-        </button>
-        <button
-          type="button"
-          data-testid="btn-ranking"
-          onClick={ this.rankingScreen }
-          className="ranking"
-        >
-          Ranking
-        </button>
+          </button>
+          <button
+            type="button"
+            data-testid="btn-ranking"
+            onClick={ this.rankingScreen }
+            className="ranking"
+          >
+            Ranking
+          </button>
+        </div>
       </div>
     );
   }

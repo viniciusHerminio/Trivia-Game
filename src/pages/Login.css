@@ -12,7 +12,7 @@ body {
 }
 
 .purpleLayer {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgb(60, 0, 122, 0.8));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgb(60, 0, 122, 0.75));
   height: 100vh;
   position: absolute;
   width: 100vw;

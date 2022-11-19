@@ -7,9 +7,14 @@ body {
   height: 253px;
   left: 0;
   position: absolute;
-  top: 470px;
+  bottom: 0;
   width: 100vw;
   z-index: -1;
+}
+
+.logoTrivia {
+  display: block;
+  margin: 0 auto auto;
 }
 
 .play {
@@ -26,9 +31,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 45px;
-  left: 647px;
-  position: absolute;
-  top: 622px;
   width: 213px;
 }
 
@@ -46,64 +48,23 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 45px;
-  left: 421px;
-  position: absolute;
-  top: 622px;
   width: 212.5px;
 }
 
-.intAmarelo {
-  left: 597.2px;
-  position: absolute;
-  top: 68.07px;
-}
-
-.intVerde {
-  left: 625.1px;
-  position: absolute;
-  top: 47.71px;
-}
-
-.intVermelho {
-  left: 667.87px;
-  position: absolute;
-  top: 61.18px;
-}
-
-.ellipse {
-  left: 571.84px;
-  position: absolute;
-  top: 28.21px;
-}
-
-.polygon {
-  left: 630px;
-  position: absolute;
-  top: 170px;
-}
-
-.trivia {
-  left: 600px;
-  position: absolute;
-  top: 110px;
-  width: 90px;
-}
 
 .box {
   background: #FFFFFF;
   border-radius: 10px;
   box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
-  height: 278px;
   /* left: 421px;
   position: absolute;
   top: 329px; */
-  width: 439px;
+  max-width: 439px;
+  margin: 150px auto auto;
 }
 
 .mensagem {
-  align-items: center;
   color: #EA5D5D;
-  display: flex;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -114,13 +75,11 @@ body {
   text-align: center;
   text-transform: uppercase;
   /* top: 400px; */
-  width: 439px;
 }
 
 .assertions {
   align-items: center;
   color: #B5B5B5;
-  display: flex;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -130,13 +89,11 @@ body {
   /* position: absolute; */
   text-align: center;
   /* top: 513px; */
-  width: 353px;
 }
 
 .score {
-  align-items: center;
+  text-align: center;
   color: #B5B5B5;
-  display: flex;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -146,7 +103,6 @@ body {
   /* position: absolute; */
   text-align: center;
   /* top: 490px; */
-  width: 353px;
 }
 
 .foto {
@@ -155,9 +111,11 @@ body {
   box-sizing: border-box;
   filter: drop-shadow(0 0 9 #EA5D5D);
   height: 213px;
+  margin-top: -130px;
   /* left: 534px;
   position: absolute; */
   /* top: 200px; */
   width: 213px;
   z-index: 1;
 }
+
