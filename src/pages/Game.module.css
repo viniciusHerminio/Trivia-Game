@@ -17,7 +17,7 @@
   border: 3px solid red;
   border-radius: 5px;
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-  color: white;
+  color: black;
   cursor: pointer;
   margin: 5px;
   outline: none;
@@ -32,7 +32,7 @@
   border: 3px solid rgb(6, 240, 15);
   border-radius: 5px;
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  color: white;
+  color: black;
   cursor: pointer;
   margin: 5px;
   outline: none;

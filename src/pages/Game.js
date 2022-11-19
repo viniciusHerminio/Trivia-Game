@@ -46,11 +46,6 @@ class Game extends React.Component {
     }, () => { this.setState({ loadingQuestions: false }); });
   }
 
-  redirectPage = () => {
-    const { history } = this.props;
-    history.push('/settings');
-  };
-
   timerStopwatch = () => {
     const { stopwatch } = this.state;
 
@@ -200,13 +195,6 @@ class Game extends React.Component {
             </button>
           )
           : null}
-        <button
-          type="button"
-          data-testid="btn-settings"
-          onClick={ this.redirectPage }
-        >
-          Configuração
-        </button>
       </div>
     );
   }
