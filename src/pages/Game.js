@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import getQuestions from '../service/getQuestions';
 import styles from './Game.module.css';
 import { addScore, addAssertions } from '../redux/actions';
+import logoTrivia from '../images/logoTrivia.png';
 
 class Game extends React.Component {
   state = {
@@ -54,6 +55,11 @@ class Game extends React.Component {
     } else {
       this.setState({ time: true });
     }
+  };
+
+  redirectPage = () => {
+    const { history } = this.props;
+    history.push('/settings');
   };
 
   handleClick = (testeId, difficulty) => {
@@ -122,20 +128,28 @@ class Game extends React.Component {
     const incorrectAnswers = questions.results[currentQuestion].incorrect_answers;
     return (
       <div>
-        <Header />
-        <div>
-          <h2 data-testid="question-category">
-            {category}
-          </h2>
-          <p data-testid="question-text">
-            {question}
-          </p>
-          <span>
-            Tempo:
-            {stopwatch}
-            s
-          </span>
-          <div data-testid="answer-options">
+        <Header redirectPage={ this.redirectPage } />
+        <div className={ styles.divMaster }>
+          <div className={ styles.logoQuestion }>
+            <img src={ logoTrivia } alt="Logo" className={ styles.logoTrivia } />
+            <div className={ styles.category }>
+              <h2 data-testid="question-category">
+                {category}
+              </h2>
+            </div>
+            <div className={ styles.question }>
+
+              <p data-testid="question-text">
+                {question}
+              </p>
+              <span className={ styles.time }>
+                Tempo:
+                {stopwatch}
+                s
+              </span>
+            </div>
+          </div>
+          <div data-testid="answer-options" className={ styles.divAnswerOptions }>
             {
               shuffledAlternatives.map((alternative, index) => {
                 let dataTestId = 'correct-answer';
@@ -182,19 +196,24 @@ class Game extends React.Component {
                 );
               })
             }
+
+            {stopwatch === 0 || clicked === true
+              ? (
+                <div>
+                  <button
+                    type="button"
+                    data-testid="btn-next"
+                    onClick={ this.nextQuestion }
+                    className={ styles.btnNext }
+                  >
+                    Next
+                  </button>
+                </div>
+              )
+              : null}
           </div>
         </div>
-        {stopwatch === 0 || clicked === true
-          ? (
-            <button
-              type="button"
-              data-testid="btn-next"
-              onClick={ this.nextQuestion }
-            >
-              Next
-            </button>
-          )
-          : null}
+        <footer className={ styles.footer } />
       </div>
     );
   }

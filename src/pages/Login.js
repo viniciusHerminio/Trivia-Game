@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { AiFillSetting } from 'react-icons/ai';
 import { getToken, getLogin } from '../redux/actions';
 import logo from '../trivia.png';
 import './Login.css';
@@ -105,7 +106,7 @@ class Login extends React.Component {
             onClick={ this.redirectPage }
             className="btnSettings"
           >
-            {/* <CiSettings size={ 28 } /> */}
+            <AiFillSetting className="btnSettings" />
           </button>
 
         </div>

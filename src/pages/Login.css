@@ -1,5 +1,5 @@
 body {
-  font-family: Verdana , Geneva , Tahoma , sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .loginMainDiv {
@@ -98,8 +98,14 @@ body {
   z-index: -9;
 }
 
+.btnSettings {
+  font-size: 28px;
+  border: none;
+  background-color: white;
+}
 
-@media only screen and ( max-width : 1040px ) {
+
+@media only screen and (max-width : 1040px) {
 
   .loginForm {
     max-width: 100%;
@@ -113,7 +119,8 @@ body {
     width: 100%;
   }
 
-  .loginForm div, .loginForm button {
+  .loginForm div,
+  .loginForm button {
     margin: 0;
     width: 100%;
   }

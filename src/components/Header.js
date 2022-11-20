@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MD5 from 'crypto-js/md5';
 import { AiFillStar, AiFillSetting } from 'react-icons/ai';
-import { Redirect } from 'react-router-dom';
 import styles from './Header.module.css';
 
 class Header extends Component {
   render() {
-    const { name, score, gravatarEmail } = this.props;
+    const { name, score, gravatarEmail, redirectPage } = this.props;
+
     return (
       <div className={ styles.divMaster }>
         <div className={ styles.nameImage }>
@@ -27,8 +27,8 @@ class Header extends Component {
         <button
           type="button"
           data-testid="btn-settings"
-          onClick={ () => <Redirect to="/settings" /> }
           className={ styles.buttonSettings }
+          onClick={ () => redirectPage() }
         >
           <AiFillSetting className={ styles.settings } />
         </button>
@@ -39,6 +39,7 @@ class Header extends Component {
 
 Header.propTypes = {
   gravatarEmail: PropTypes.string.isRequired,
+  redirectPage: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
 };
