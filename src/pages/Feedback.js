@@ -3,7 +3,7 @@ import './Feedback.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import MD5 from 'crypto-js/md5';
-// import Header from '../components/Header';
+/* import Header from '../components/Header'; */
 import { clearState } from '../redux/actions';
 import logoTrivia from '../images/logoTrivia.png';
 
@@ -25,11 +25,11 @@ class Feedback extends React.Component {
     const minimo = 3;
     return (
       <div>
+        {/*  <Header /> */}
         <div className="footer" />
         <img src={ logoTrivia } alt="Logo" className="logoTrivia" />
         <div className="containerFeedback">
           <div className="box">
-            {/* <Header /> */}
             <img
               data-testid="header-profile-picture"
               src={ `https://www.gravatar.com/avatar/${MD5(gravatarEmail)}` }
