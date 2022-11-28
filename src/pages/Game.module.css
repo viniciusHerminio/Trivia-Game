@@ -134,3 +134,31 @@ button:disabled {
 .logoQuestion {
   margin-top: -150px;
 }
+
+@media only screen and (max-width : 1040px) {
+
+  .logoTrivia {
+    width: 150px;
+  }
+
+  .question {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    margin-left: 20px;
+  }
+
+  .footer {
+    height: 100px;
+  }
+
+  .divMaster {
+    margin-top: 200px;
+  }
+
+  .category {
+    margin-left: 20px;
+  }
+
+
+}
